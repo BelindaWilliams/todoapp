@@ -12,5 +12,5 @@ return function (App $app) {
         return $renderer->render($response, "index.php", $args);
     });
 
-    $app->get('/todo/{id}', 'ViewTaskController');
+    $app->get('/todo', 'ViewTaskController');
 };

@@ -20,8 +20,8 @@ class ViewTaskController
 
     public function __invoke(RequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
-        $task = $this->viewTaskModel->get($args['id']);
+        $tasks = $this->viewTaskModel->getAll();
 
-        return $this->renderer->render($response, 'view.phtml', ['task' => $task]);
+        return $this->renderer->render($response, 'view.phtml', ['tasks' => $tasks]);
     }
 }

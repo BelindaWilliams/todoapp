@@ -6,9 +6,12 @@ use App\Entities\Task;
 
 class ViewTaskViewHelper
 {
-    public static function displayTask(Task $task): string
+    public static function displayTasks(array $tasks): string
     {
-        $htmlStr = '<p>' . $task->getTask() . '</p>';
+        $htmlStr = '';
+        foreach ($tasks as $task) {
+            $htmlStr .= '<p>' . $task->getTask() . '</p>';
+        }
         return $htmlStr;
     }
 }
