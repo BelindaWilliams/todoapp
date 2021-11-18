@@ -12,4 +12,9 @@ return function (App $app) {
         return $renderer->render($response, "index.php", $args);
     });
 
+    $app->get('/todo', 'ViewTaskController');
+
+    $app->get('/add', 'AddTaskController');
+
+    $app->get('/edit', 'EditTaskController');
 };
