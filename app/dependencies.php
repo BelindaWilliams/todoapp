@@ -33,5 +33,15 @@ return function (ContainerBuilder $containerBuilder) {
         return $renderer;
     };
 
+    $container['dbConnection'] = function (ContainerInterface $c) {
+        $settings = $c->get('settings')['db'];
+        $db = new PDO($settings['host'] . $settings['dbname'], $settings['username'], $settings['password']);
+        $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        return $db;
+    };
+
+    $container['ViewTaskController'] = DI\Factory('App\Factories\ViewTaskControllerFactory');
+    $container['ViewTaskModel'] = DI\Factory('App\Factories\ViewTaskModelFactory');
+
     $containerBuilder->addDefinitions($container);
 };
