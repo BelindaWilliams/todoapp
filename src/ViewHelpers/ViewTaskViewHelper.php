@@ -10,7 +10,9 @@ class ViewTaskViewHelper
     {
         $htmlStr = '';
         foreach ($tasks as $task) {
-            $htmlStr .= '<p>' . $task->getTask() . '</p>';
+            $htmlStr .= '<tr>';
+            $htmlStr .= '<td>' . $task->getTask() . '</td>';
+            $htmlStr .= '</tr>';
         }
         return $htmlStr;
     }
