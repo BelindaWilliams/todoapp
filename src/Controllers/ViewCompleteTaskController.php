@@ -7,7 +7,7 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use Slim\Views\PhpRenderer;
 
-class ViewTaskController
+class ViewCompleteTaskController
 {
     private PhpRenderer $renderer;
     private ViewTaskModel $viewTaskModel;
@@ -20,7 +20,7 @@ class ViewTaskController
 
     public function __invoke(RequestInterface $request, ResponseInterface $response, array $args): ResponseInterface
     {
-        $tasks = $this->viewTaskModel->getAll();
+        $tasks = $this->viewTaskModel->getCompletedTasks();
 
         return $this->renderer->render($response, 'view.phtml', ['tasks' => $tasks]);
     }

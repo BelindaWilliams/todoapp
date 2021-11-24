@@ -22,7 +22,6 @@ class AddTaskController
     {
         $data = $request->getParsedBody();
         $this->addTaskModel->addNewTask($data);
-//        return $this->renderer->render($response, 'view.phtml', ['data' => $data]);
         return $response->withHeader('Location', './todo');
     }
 }

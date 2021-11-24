@@ -6,7 +6,8 @@ class Task
 {
     private int $id;
     private string $task;
-//    private int $status_code;
+    private int $completed;
+    private int $deleted;
 
     public function getId(): int
     {
@@ -18,8 +19,13 @@ class Task
         return $this->task;
     }
 
-//    public function getStatusCode(): int
-//    {
-//        return $this->status_code;
-//    }
+    public function getCompleted(): int
+    {
+        return $this->completed;
+    }
+
+    public function getDeleted(): int
+    {
+        return $this->deleted;
+    }
 }

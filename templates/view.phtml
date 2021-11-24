@@ -19,8 +19,8 @@
 
             <div class="container">
                 <table class="table table-dark">
-                    <th>Incomplete Tasks</th>
-                    <?php echo \App\ViewHelpers\ViewTaskViewHelper::displayTasks($tasks); ?>
+                    <th>Outstanding Tasks</th>
+                    <?php echo \App\ViewHelpers\ViewTaskHelper::displayTasks($tasks); ?>
                 </table>
             </div>
 
