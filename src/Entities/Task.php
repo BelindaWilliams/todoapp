@@ -6,7 +6,7 @@ class Task
 {
     private int $id;
     private string $task;
-    private int $status_code;
+//    private int $status_code;
 
     public function getId(): int
     {
@@ -18,8 +18,8 @@ class Task
         return $this->task;
     }
 
-    public function getStatusCode(): int
-    {
-        return $this->status_code;
-    }
+//    public function getStatusCode(): int
+//    {
+//        return $this->status_code;
+//    }
 }

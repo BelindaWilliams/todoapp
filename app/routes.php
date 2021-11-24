@@ -13,4 +13,6 @@ return function (App $app) {
     });
 
     $app->get('/todo', 'ViewTaskController');
+
+    $app->post('/todo', 'AddTaskController');
 };

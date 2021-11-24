@@ -43,5 +43,8 @@ return function (ContainerBuilder $containerBuilder) {
     $container['ViewTaskController'] = DI\Factory('App\Factories\ViewTaskControllerFactory');
     $container['ViewTaskModel'] = DI\Factory('App\Factories\ViewTaskModelFactory');
 
+    $container['AddTaskController'] = DI\Factory('App\Factories\AddTaskControllerFactory');
+    $container['AddTaskModel'] = DI\Factory('App\Factories\AddTaskModelFactory');
+
     $containerBuilder->addDefinitions($container);
 };

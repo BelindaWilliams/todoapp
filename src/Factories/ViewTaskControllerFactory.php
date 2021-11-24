@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Factories;
 
 use App\Controllers\ViewTaskController;

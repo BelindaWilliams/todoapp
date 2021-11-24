@@ -14,12 +14,7 @@
             </div>
 
             <div class="container">
-                <form action="/" method="post">
-                    <div class="form-group">
-                        <input class="form-control" type="text" id="newtask" placeholder="Add new task">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Add</button>
-                </form>
+                <?php echo \App\ViewHelpers\AddTaskViewHelper::displayAddTaskForm(); ?>
             </div>
 
             <div class="container">
