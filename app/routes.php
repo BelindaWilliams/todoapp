@@ -12,4 +12,11 @@ return function (App $app) {
         return $renderer->render($response, "index.php", $args);
     });
 
+    $app->post('/todo', 'AddTaskController');
+
+    $app->get('/todo', 'ViewIncompleteTaskController');
+
+    $app->post('/markComplete/{id}', 'MarkCompleteController');
+
+    $app->post('/deleteTask/{id}', 'DeleteTaskController');
 };
