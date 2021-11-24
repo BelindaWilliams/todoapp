@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2f2fa2;
+    color: #ffffff;
+}
+
+h1 {
+    color: #f64c72;
+    font-family: 'Sora', sans-serif;
+    font-size: 10rem;
+}
+
+.add-btn {
+    background-color: #f64c72;
+    color: #ffffff;
+    font-size: 1.5rem;
+}

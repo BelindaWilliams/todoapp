@@ -7,10 +7,10 @@ class AddTaskViewHelper
     public static function displayAddTaskForm(): string
     {
         $htmlStr = '<form action="todo" method="post">';
-        $htmlStr .= '<div class="form-group">';
+        $htmlStr .= '<div class="input-group mb-3">';
         $htmlStr .= '<input class="form-control" type="text" name="task" id="task" placeholder="Add new task">';
+        $htmlStr .= '<button class="btn btn-outline-secondary add-btn" type="submit">Add</button>';
         $htmlStr .= '</div>';
-        $htmlStr .= '<button type="submit" class="btn btn-primary">Add</button>';
         $htmlStr .= '</form>';
         return $htmlStr;
     }
