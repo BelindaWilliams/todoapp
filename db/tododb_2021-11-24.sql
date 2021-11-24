@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.35)
 # Database: tododb
-# Generation Time: 2021-11-24 14:32:39 +0000
+# Generation Time: 2021-11-24 18:59:03 +0000
 # ************************************************************
 
 
@@ -29,18 +29,19 @@ DROP TABLE IF EXISTS `tasks`;
 CREATE TABLE `tasks` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `task` varchar(255) NOT NULL DEFAULT '',
-  `status_code` int(11) DEFAULT NULL,
+  `completed` int(1) DEFAULT '0',
+  `deleted` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `tasks` WRITE;
 /*!40000 ALTER TABLE `tasks` DISABLE KEYS */;
 
-INSERT INTO `tasks` (`id`, `task`, `status_code`)
+INSERT INTO `tasks` (`id`, `task`, `completed`, `deleted`)
 VALUES
-	(1,'Walk to pub',1),
-	(2,'Eat in pub',1),
-	(3,'Drink in pub',1);
+	(1,'Walk to pub',0,0),
+	(2,'Eat in pub',0,0),
+	(3,'Drink in pub',0,0);
 
 /*!40000 ALTER TABLE `tasks` ENABLE KEYS */;
 UNLOCK TABLES;

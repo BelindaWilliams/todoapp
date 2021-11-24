@@ -12,8 +12,9 @@ class ViewTaskHelper
         foreach ($tasks as $task) {
             $htmlStr .= '<tr class="table-light">';
             $htmlStr .= '<td>' . $task->getTask() . '</td>';
+            $htmlStr .= '<td>';
             $htmlStr .= '<td><form method="post" action="markComplete/' . $task->getId() . '">';
-            $htmlStr .= '<input type="submit" value ="Completed" class="btn btn-primary"></td>';
+            $htmlStr .= '<input type="submit" value ="Complete" class="btn btn-primary"></td>';
             $htmlStr .= '</form>';
             $htmlStr .= '<td><form method="post" action="deleteTask/' . $task->getId() . '">';
             $htmlStr .= '<input type="submit" value ="Delete" class="btn btn-primary"></td>';
