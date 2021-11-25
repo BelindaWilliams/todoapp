@@ -14,9 +14,11 @@ return function (App $app) {
 
     $app->post('/todo', 'AddTaskController');
 
-    $app->get('/todo', 'ViewIncompleteTaskController');
+    $app->get('/todo', 'ViewTaskController');
 
     $app->post('/markComplete/{id}', 'MarkCompleteController');
+
+    $app->post('/undoComplete/{id}', 'UndoCompleteController');
 
     $app->post('/deleteTask/{id}', 'DeleteTaskController');
 };

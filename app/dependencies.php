@@ -44,11 +44,11 @@ return function (ContainerBuilder $containerBuilder) {
     $container['AddTaskController'] = DI\Factory('App\Factories\AddTaskControllerFactory');
 
     $container['ViewTaskModel'] = DI\Factory('App\Factories\ViewTaskModelFactory');
-    $container['ViewIncompleteTaskController'] = DI\Factory('App\Factories\ViewIncompleteTaskControllerFactory');
-//    $container['ViewCompleteTaskController'] = DI\Factory('App\Factories\ViewCompleteTaskControllerFactory');
+    $container['ViewTaskController'] = DI\Factory('App\Factories\ViewTaskControllerFactory');
 
     $container['DeleteTaskController'] = DI\Factory('\App\Factories\DeleteTaskControllerFactory');
     $container['MarkCompleteController'] = DI\Factory('\App\Factories\MarkCompleteControllerFactory');
+    $container['UndoCompleteController'] = DI\Factory('\App\Factories\UndoCompleteControllerFactory');
 
     $containerBuilder->addDefinitions($container);
 };

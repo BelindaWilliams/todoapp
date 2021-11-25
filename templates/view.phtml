@@ -24,7 +24,14 @@
             <div class="container">
                 <table class="table table-light">
                     <h3>Outstanding Tasks</h3>
-                    <?php echo \App\ViewHelpers\ViewTaskHelper::displayTasks($tasks); ?>
+                    <?php echo \App\ViewHelpers\ViewTaskHelper::displayIncompleteTasks($incompleteTasks); ?>
+                </table>
+            </div>
+
+            <div class="container">
+                <table class="table table-light">
+                    <h3>Completed Tasks</h3>
+                    <?php echo \App\ViewHelpers\ViewTaskHelper::displayCompletedTasks($completedTasks); ?>
                 </table>
             </div>
 

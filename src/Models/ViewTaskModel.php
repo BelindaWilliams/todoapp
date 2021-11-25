@@ -78,6 +78,17 @@ class ViewTaskModel
         $query->execute([$id]);
     }
 
+    public function undoComplete(int $id): void
+    {
+        $sql = 'UPDATE '
+            . '`tasks` '
+            . 'SET '
+            . '`completed` = 0 '
+            . 'WHERE `id` = ?';
+        $query = $this->dbConnection->prepare($sql);
+        $query->execute([$id]);
+    }
+
     public function markAsDeleted(int $id): void
     {
         $sql = 'UPDATE '
