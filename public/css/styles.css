@@ -32,9 +32,20 @@ h1 {
     font-size: 1.5rem;
 }
 
+.custom-btn {
+    background-color: #f64c72;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
 h3 {
     color: #c7c7ef;
     font-family: 'Sora', sans-serif;
     font-size: 2rem;
     padding-top: 2rem;
+}
+
+.completed-tasks {
+    color: gray;
+    text-decoration: line-through;
 }

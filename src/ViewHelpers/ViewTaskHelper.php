@@ -12,13 +12,10 @@ class ViewTaskHelper
         foreach ($incompleteTasks as $task) {
             $htmlStr .= '<tr class="table-light">';
             $htmlStr .= '<td>' . $task->getTask() . '</td>';
-            $htmlStr .= '<td>';
             $htmlStr .= '<td><form method="post" action="markComplete/' . $task->getId() . '">';
-            $htmlStr .= '<input type="submit" value ="Complete" class="btn btn-primary"></td>';
-            $htmlStr .= '</form>';
+            $htmlStr .= '<input type="submit" value ="Complete" class="btn custom-btn"></form></td>';
             $htmlStr .= '<td><form method="post" action="deleteTask/' . $task->getId() . '">';
-            $htmlStr .= '<input type="submit" value ="Delete" class="btn btn-primary"></td>';
-            $htmlStr .= '</form>';
+            $htmlStr .= '<input type="submit" value ="Delete" class="btn custom-btn"></form></td>';
             $htmlStr .= '</tr>';
         }
         return $htmlStr;
@@ -29,14 +26,11 @@ class ViewTaskHelper
         $htmlStr = '';
         foreach ($completedTasks as $task) {
             $htmlStr .= '<tr class="table-light">';
-            $htmlStr .= '<td>' . $task->getTask() . '</td>';
-            $htmlStr .= '<td>';
+            $htmlStr .= '<td><span class="completed-tasks">' . $task->getTask() . '</span></td>';
             $htmlStr .= '<td><form method="post" action="undoComplete/' . $task->getId() . '">';
-            $htmlStr .= '<input type="submit" value ="Undo" class="btn btn-primary"></td>';
-            $htmlStr .= '</form>';
+            $htmlStr .= '<input type="submit" value ="Undo" class="btn custom-btn"></form></td>';
             $htmlStr .= '<td><form method="post" action="deleteTask/' . $task->getId() . '">';
-            $htmlStr .= '<input type="submit" value ="Delete" class="btn btn-primary"></td>';
-            $htmlStr .= '</form>';
+            $htmlStr .= '<input type="submit" value ="Delete" class="btn custom-btn"></form></td>';
             $htmlStr .= '</tr>';
         }
         return $htmlStr;
